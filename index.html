@@ -7,19 +7,20 @@
   <meta name="robots" content="index, follow">
   <title>RefHub | Партнёрские ссылки с бонусами</title>
   
-  <!-- 🔥 ЯНДЕКС.МЕТРИКА (вставь свой ID вместо XXXXXXXXX) -->
+  <!-- 🔥 ЯНДЕКС.МЕТРИКА -->
+  <!-- Yandex.Metrika counter -->
   <script type="text/javascript">
-    window.yaCounterConfig = {counterId: XXXXXXXXX, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true};
-    if(typeof window.yaCounterConfig==='object'){window.yaCounterConfig.id=window.yaCounterConfig.counterId;delete window.yaCounterConfig.counterId}
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=108456962', 'ym');
+
+    ym(108456962, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
   </script>
-  <script type="text/javascript" async src="https://mc.yandex.ru/metrika/tag.js"></script>
-  <script type="text/javascript">
-    try{
-      window.yaCounter=window.yaCounterConfig?new Ya.Metrika2(window.yaCounterConfig):new Ya.Metrika({id:window.yaCounterConfig.id,clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true})
-    }catch(e){}
-  </script>
-  <noscript><div><img src="https://mc.yandex.ru/watch/XXXXXXXXX" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-  <!-- 🔥 КОНЕЦ КОДА ЯНДЕКС.МЕТРИКИ -->
+  <noscript><div><img src="https://mc.yandex.ru/watch/108456962" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
   
   <style>
     :root {
@@ -309,11 +310,15 @@
       if(link.classList.contains('disabled')) return;
       link.addEventListener('click', e => {
         const name = e.currentTarget.dataset.name;
-        console.log(`🖱️ Клик: ${name}`);
+        const category = e.currentTarget.closest('.card').dataset.category;
+        console.log(`🖱️ Клик: ${name} (категория: ${category})`);
         
         // Отправка цели в Яндекс.Метрику
-        if(typeof window.yaCounter !== 'undefined') {
-          window.yaCounter.reachGoal('ref_click', {service: name});
+        if(typeof window.ym !== 'undefined') {
+          ym(108456962, 'reachGoal', 'ref_click', {
+            service: name,
+            category: category
+          });
         }
         
         // Сохранение в localStorage (локальная статистика)
