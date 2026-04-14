@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="RefHub — проверенные реферальные ссылки с бонусами...">
+  <meta name="description" content="RefHub — проверенные реферальные ссылки с бонусами. Банки, криптобиржи, магазины, заработок.">
   <meta name="keywords" content="реферальные ссылки, бонусы, кэшбэк, партнёрские программы">
   <link rel="icon" href="/favicon.png" type="image/png">
   
-  <!-- PushAdvert Script -->
-  <script type="text/javascript" src="https://pushadvert.bid/code/g4zwczbumu5ha3ddf4zdmnjs" async></script>
-  
   <!-- Yandex.Zen Verification -->
   <meta name="zen-verification" content="e9oBR7fbHjmfc6u4c17yjcemPeb7tPSY7ReDzPPYPl9dOyoSPLccGkie6RA5cB" />
+  
+  <!-- PushAdvert Script -->
+  <script type="text/javascript" src="https://pushadvert.bid/code/g4zwczbumu5ha3ddf4zdmnjs" async></script>
   
   <title>RefHub | Партнёрские ссылки с бонусами</title>
   
@@ -470,21 +470,21 @@
     </div>
 
     <div class="card" data-category="tools">
-  <img src="https://www.google.com/s2/favicons?domain=1-ofd.ru&sz=128" alt="1-OFD" class="card-logo" loading="lazy">
-  <div class="card-header"><h3>1-OFD</h3><span class="tag">Для ИП и ООО</span></div>
-  <p>Оператор фискальных данных: передача чеков в налоговую, электронные чеки, интеграция с онлайн-кассами. Соответствие 54-ФЗ, отчётность для бизнеса.</p>
-  <a href="https://zallj.com/g/yo25e1w1tz052ba5d041b17e829c53/?erid=2bL9aMPo2e49hMef4pgVYbFgeg" target="_blank" rel="sponsored noopener" class="btn" data-name="1-OFD">Подключить ОФД</a>
-  <div class="card-footer">Для ИП и ООО. Поддержка 24/7. Интеграция с популярными кассами.</div>
-</div>
-
-    <!-- Рекомендуемый партнёр -->
-<div style="margin:2rem 0;text-align:center;">
-  <p style="font-weight:600;margin-bottom:1rem;">🔐 Рекомендуем:</p>
-  <a target="_blank" rel="sponsored noopener" href="https://dhwnh.com/g/ck8lvqe41r052ba5d041e5a65aad3a/?i=4&erid=2bL9aMPo2e49hMef4piV5G71L6">
-    <img width="100%" height="auto" style="max-width:400px;border-radius:8px;" src="https://aflink.ru/b/ck8lvqe41r052ba5d041e5a65aad3a/" alt="Kaspersky"/>
-  </a>
-</div>
+      <img src="https://www.google.com/s2/favicons?domain=1-ofd.ru&sz=128" alt="1-OFD" class="card-logo" loading="lazy">
+      <div class="card-header"><h3>1-OFD</h3><span class="tag">Для ИП и ООО</span></div>
+      <p>Оператор фискальных данных: передача чеков в налоговую, электронные чеки, интеграция с онлайн-кассами. Соответствие 54-ФЗ.</p>
+      <a href="https://zallj.com/g/yo25e1w1tz052ba5d041b17e829c53/?erid=2bL9aMPo2e49hMef4pgVYbFgeg" target="_blank" rel="sponsored noopener" class="btn" data-name="1-OFD">Подключить ОФД</a>
+      <div class="card-footer">Для ИП и ООО. Поддержка 24/7.</div>
+    </div>
   </section>
+
+  <!-- Баннер Kaspersky -->
+  <div style="margin:2rem 0;text-align:center;">
+    <p style="font-weight:600;margin-bottom:1rem;">🔐 Рекомендуем:</p>
+    <a target="_blank" rel="sponsored noopener" href="https://dhwnh.com/g/ck8lvqe41r052ba5d041e5a65aad3a/?i=4&erid=2bL9aMPo2e49hMef4piV5G71L6">
+      <img width="100%" height="auto" style="max-width:400px;border-radius:8px;" src="https://aflink.ru/b/ck8lvqe41r052ba5d041e5a65aad3a/" alt="Kaspersky"/>
+    </a>
+  </div>
 
   <section id="legal">
     <div class="container">
@@ -577,6 +577,30 @@
       
       filterBtns.forEach(b => b.classList.remove('active'));
       filterBtns[0].classList.add('active');
+    });
+
+    // Yandex.Metrika counter
+    (function(m,e,t,r,i,k,a){
+      m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+      m[i].l=1*new Date();
+      for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+      k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js', 'ym');
+
+    ym(108456962, 'init', {
+      clickmap:true,
+      trackLinks:true,
+      accurateTrackBounce:true,
+      webvisor:true
+    });
+
+    // Track clicks on affiliate links
+    document.querySelectorAll('.btn[data-name]').forEach(link => {
+      link.addEventListener('click', function() {
+        if (this.getAttribute('href') !== '#') {
+          ym(108456962, 'reachGoal', 'ref_click');
+        }
+      });
     });
   </script>
 </body>
