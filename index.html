@@ -9,9 +9,9 @@
   
   <!-- Yandex.Zen Verification -->
   <meta name="zen-verification" content="e9oBR7fbHjmfc6u4c17yjcemPeb7tPSY7ReDzPPYPl9dOyoSPLccGkie6RA5cB" />
-
+  
   <!-- Yandex Distribution Verification -->
-<meta name="yandex-verification" content="m6r81qzqzg30r1n2" />
+  <meta name="yandex-verification" content="m6r81qzqzg30r1n2" />
   
   <!-- PushAdvert Script -->
   <script type="text/javascript" src="https://pushadvert.bid/code/g4zwczbumu5ha3ddf4zdmnjs" async></script>
@@ -120,6 +120,45 @@
     .search-input:focus {
       outline: none;
       border-color: var(--primary);
+    }
+    
+    /* Yandex Search Bar Styles */
+    .yandex-search {
+      max-width: 1150px;
+      margin: 1rem auto;
+      padding: 0 2rem;
+    }
+    
+    .yandex-search form {
+      display: flex;
+      gap: 0.5rem;
+      background: var(--card-bg);
+      padding: 0.5rem;
+      border-radius: 8px;
+      border: 2px solid var(--border);
+    }
+    
+    .yandex-search input[type="text"] {
+      flex: 1;
+      border: none;
+      background: transparent;
+      padding: 0.5rem;
+      font-size: 1rem;
+      outline: none;
+    }
+    
+    .yandex-search button {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 0.5rem 1.5rem;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    
+    .yandex-search button:hover {
+      background: var(--primary-hover);
     }
     
     #catalog {
@@ -255,7 +294,16 @@
     <button class="filter-btn" data-filter="shops">🛒 Магазины</button>
     <button class="filter-btn" data-filter="earnings">💼 Заработок</button>
     <button class="filter-btn" data-filter="tools">🔧 Инструменты</button>
-    <input type="text" class="search-input" placeholder="🔍 Поиск..." id="searchInput">
+    <input type="text" class="search-input" placeholder="🔍 Поиск по сайту..." id="searchInput">
+  </div>
+
+  <!-- Yandex Search Bar -->
+  <div class="yandex-search">
+    <form action="https://ya.ru/search/" method="get" target="_blank">
+      <input type="text" name="text" placeholder="🔍 Поиск в Яндексе..." />
+      <input type="hidden" name="clid" value="14930731" />
+      <button type="submit">Найти</button>
+    </form>
   </div>
 
   <section id="catalog">
@@ -407,20 +455,20 @@
     </div>
 
     <div class="card" data-category="shops">
-  <img src="https://www.google.com/s2/favicons?domain=sportmaster.ru&sz=128" alt="Спортмастер" class="card-logo" loading="lazy">
-  <div class="card-header"><h3>Спортмастер</h3><span class="tag">Кэшбэк до 10%</span></div>
-  <p>Крупнейший спортивный ритейлер. Одежда, обувь, снаряжение для активного отдыха, фитнеса и туризма. Регулярные скидки и акции.</p>
-  <a href="https://iatjw.com/g/ih21ujqkwf052ba5d041b09e931874/?erid=2SH8d7vbP8SRTvFalOupqm" target="_blank" rel="sponsored noopener" class="btn" data-name="Спортмастер">Перейти в магазин</a>
-  <div class="card-footer">Доставка по РФ. Возврат 14 дней. Программа лояльности.</div>
-</div>
+      <img src="https://www.google.com/s2/favicons?domain=sportmaster.ru&sz=128" alt="Спортмастер" class="card-logo" loading="lazy">
+      <div class="card-header"><h3>Спортмастер</h3><span class="tag">Кэшбэк до 10%</span></div>
+      <p>Крупнейший спортивный ритейлер. Одежда, обувь, снаряжение для активного отдыха, фитнеса и туризма. Регулярные скидки и акции.</p>
+      <a href="https://iatjw.com/g/ih21ujqkwf052ba5d041b09e931874/?erid=2SH8d7vbP8SRTvFalOupqm" target="_blank" rel="sponsored noopener" class="btn" data-name="Спортмастер">Перейти в магазин</a>
+      <div class="card-footer">Доставка по РФ. Возврат 14 дней. Программа лояльности.</div>
+    </div>
 
     <div class="card" data-category="shops">
-  <img src="https://www.google.com/s2/favicons?domain=megafon.ru&sz=128" alt="МегаФон" class="card-logo" loading="lazy">
-  <div class="card-header"><h3>МегаФон</h3><span class="tag">eSIM и связь</span></div>
-  <p>Крупнейший мобильный оператор. Выгодные тарифы, безлимитный интернет, eSIM за 5 минут. Подключение онлайн без визита в салон.</p>
-  <a href="https://dhwnh.com/g/207bcbdf4c052ba5d041159ac4a8d3/?erid=F7NfYUJRWmqhH7kvRQRV" target="_blank" rel="sponsored noopener" class="btn" data-name="МегаФон">Подключить тариф</a>
-  <div class="card-footer">Доставка SIM. Поддержка 24/7. Роуминг по РФ.</div>
-</div>
+      <img src="https://www.google.com/s2/favicons?domain=megafon.ru&sz=128" alt="МегаФон" class="card-logo" loading="lazy">
+      <div class="card-header"><h3>МегаФон</h3><span class="tag">eSIM и связь</span></div>
+      <p>Крупнейший мобильный оператор. Выгодные тарифы, безлимитный интернет, eSIM за 5 минут. Подключение онлайн без визита в салон.</p>
+      <a href="https://dhwnh.com/g/207bcbdf4c052ba5d041159ac4a8d3/?erid=F7NfYUJRWmqhH7kvRQRV" target="_blank" rel="sponsored noopener" class="btn" data-name="МегаФон">Подключить тариф</a>
+      <div class="card-footer">Доставка SIM. Поддержка 24/7. Роуминг по РФ.</div>
+    </div>
 
     <div class="card" data-category="shops">
       <img src="https://www.google.com/s2/favicons?domain=goodly.pro&sz=128" alt="Goodly.pro" class="card-logo" loading="lazy">
@@ -494,6 +542,15 @@
       <p>Оператор фискальных данных: передача чеков в налоговую, электронные чеки, интеграция с онлайн-кассами. Соответствие 54-ФЗ.</p>
       <a href="https://zallj.com/g/yo25e1w1tz052ba5d041b17e829c53/?erid=2bL9aMPo2e49hMef4pgVYbFgeg" target="_blank" rel="sponsored noopener" class="btn" data-name="1-OFD">Подключить ОФД</a>
       <div class="card-footer">Для ИП и ООО. Поддержка 24/7.</div>
+    </div>
+
+    <!-- Yandex Browser Card -->
+    <div class="card" data-category="tools">
+      <img src="https://www.google.com/s2/favicons?domain=browser.yandex.ru&sz=128" alt="Яндекс Браузер" class="card-logo" loading="lazy">
+      <div class="card-header"><h3>Яндекс Браузер</h3><span class="tag">Бонус за установку</span></div>
+      <p>Быстрый и безопасный браузер с Алисой, защитой от вирусов и турбо-режимом. Экономия трафика до 70%.</p>
+      <a href="https://redirect.appmetrica.yandex.com/serve/750377939027156730?partner_id=831050&appmetrica_js_redirect=0&full=0&clid=14930741&banerid=1314930738" target="_blank" rel="sponsored noopener" class="btn" data-name="Яндекс Браузер">Скачать браузер</a>
+      <div class="card-footer">Бесплатно. Синхронизация с Яндекс.Аккаунтом.</div>
     </div>
   </section>
 
